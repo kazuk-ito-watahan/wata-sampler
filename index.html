@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Web Sampler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Web Sampler</h1>
+
+  <div class="pad-container">
+    <script>
+      // 各パッドの説明を配列で定義
+      const desc = [
+        "拍手", "スネア", "キック", "ハイハット",
+        "クラップ", "タンバリン", "ボンゴ", "シェイカー",
+        "ボイス", "ベース", "リード", "パッド"
+      ];
+      for (let i = 1; i <= 12; i++) {
+        document.write(`
+          <button
+            class="pad"
+            data-sound="${i}"
+            data-label="${i}"
+            data-desc="${desc[i-1]}"
+          ></button>
+        `);
+      }
+    </script>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
